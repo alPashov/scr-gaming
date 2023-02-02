@@ -18,11 +18,6 @@ soup = bs(html, "html.parser")
 
 links = []
 
-# for href in soup:
-#     href = soup.select(".card-v2-info a")
-#     links.append(href["href"])
-# print(links)
-
 for href in soup.select(".card-v2-info a"):
     links.append(href["href"])
 
