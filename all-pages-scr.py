@@ -28,11 +28,14 @@ def html_parsers(htmls):
     links = []
     for h in htmls:
         soups = bs(h, "html.parser")
-        items = soups.select("div.pad-hrz-xs")
+        items = soups.select("div.card-v2-wrapper")
 
         for i in items:
-            href = i.select_one("h2.card-v2-title-wrapper a").attrs["href"]
-            links.append(href)
+            href = i.select_one("div.card-v2-info a").attrs["href"]
+            heading2 = i.select_one("div.pad-hrz-xs h2.card-v2-title-wrapper a").text.strip()
+            price = i.select_one("div.card-v2-content div.card-v2-pricing p.product-new-price").text.strip()
+            product = (heading2, price, href)
+            links.append(product)
     
         # links.append(href)
     return links
@@ -40,7 +43,6 @@ def html_parsers(htmls):
 def csv_export(links):
     with open("links_all.csv", "w", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow(["Link"])
         for href in links:
             writer.writerow([href])
 
