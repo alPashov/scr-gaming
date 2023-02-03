@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 10%;
+                margin-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            {%for link in links%}
+                <dd><a href="{{ link }}">Laptop from Emag</a></dd>
+                <hr>
+            {%endfor%}
+        </ul>
+    </body>
+</html>
