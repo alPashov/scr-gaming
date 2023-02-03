@@ -54,14 +54,14 @@ def main():
     csv_export(links)
     debugPrinting(links)
 
+def autoRun():
+    while True:
+        html = get_html()
+        links = html_parser(html)
+        csv_export(links)
+        debugPrinting(links)
+        
+        time.sleep(3600)
 
-while True:
-    html = get_html()
-    links = html_parser(html)
-    csv_export(links)
-    debugPrinting(links)
-    
-    time.sleep(3600)
-
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
