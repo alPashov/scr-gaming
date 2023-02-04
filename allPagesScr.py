@@ -1,6 +1,8 @@
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup as bs
 import csv
+from array import *
+import pandas as pd
 
 urls = [
     #Gaming Links 40
@@ -42,14 +44,28 @@ def html_parsers(htmls):
 def csv_export(links):
     with open("links_all.csv", "w", newline="") as file:
         writer = csv.writer(file)
-        for href in links:
-            writer.writerow([href])
+        for l in links:
+            writer.writerow([l])
 
+
+def print2Darr(links):
+    for r in links:
+        for c in r:
+            for e in c:
+                print(e)
+            print()
+        print()
+        print("NextList")
+        print()
 
 def main():
     htmls = get_html()
     links = html_parsers(htmls)
-    csv_export(links)
+    csv_export(links) 
+    Dframe = pd.DataFrame(links)
+    print(Dframe)
+    # print2Darr(links)
+    return links
 
 if __name__ == "__main__":
     main()
