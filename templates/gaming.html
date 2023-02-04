@@ -9,8 +9,10 @@
     </head>
     <body>
         <ul>
-            {%for link in links%}
-                <dd><a href="{{ link }}">Laptop from Emag</a></dd>
+            {%for l in links%}
+                {%for c in l%}
+                    <li>{{c}}</li>
+                {%endfor%}
                 <hr>
             {%endfor%}
         </ul>
