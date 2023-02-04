@@ -6,5 +6,5 @@
     <li>Playwright</li>
     <li>csv</li>
     <li>pandas</li>
-    <li>arrays</li>
+    <li>array</li>
 </ul>
