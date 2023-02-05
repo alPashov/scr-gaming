@@ -2,8 +2,21 @@
     <head>
         <style>
             body {
-                margin: 10%;
-                margin-top: 5%;
+                margin: 5%, auto;
+                padding: 5% auto;
+            }
+            ul {
+                width: 30%;
+                display: block;
+                float: inline-start;
+            }
+            img {
+                width: 75%;
+                text-align: center;
+            }
+            hr {
+                text-align: center;
+                width: 100%;
             }
         </style>
     </head>
@@ -11,26 +24,29 @@
         <h2>Gaming List</h2>
         <ul>
             {%for l in links[0]%}
-                    <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
+                    <img src="{{l[3]}}">
+                    <div><li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li></div>
                     <ol><h3>    {{l[1]}}</h3></ol>
+                    <hr>
             {%endfor%}
         </ul>
-        <hr>
         <h2>Everyday/Home List</h2>
         <ul>
             {%for l in links[1]%}
-                    <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
+                    <li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li>
+                    <img src="{{l[3]}}">
                     <ol><h3>    {{l[1]}}</h3></ol>
+                    <hr>
             {%endfor%}
         </ul>
-        <hr>
         <h2>Office List</h2>
         <ul>
             {%for l in links[2]%}
                     <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
+                    <img src="{{l[3]}}">
                     <ol><h3>    {{l[1]}}</h3></ol>
+                    <hr>
             {%endfor%}
         </ul>
-        <hr>
     </body>
 </html> 
