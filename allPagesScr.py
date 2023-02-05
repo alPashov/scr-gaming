@@ -61,7 +61,7 @@ def print2Darr(links):
 def main():
     htmls = get_html()
     links = html_parsers(htmls)
-    csv_export(links) 
+    # csv_export(links) 
     Dframe = pd.DataFrame(links)
     print(Dframe)
     # print2Darr(links)
