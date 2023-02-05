@@ -11,10 +11,12 @@
         <ul>
             {%for l in links%}
                 {%for c in l%}
-                    <li>{{c}}</li>
+                    <li><a href="{{c[2]}}" target="_blank">{{c[0]}}></a></li>
+                    <ol><h3>    {{c[1]}}</h3></ol>
+                    {#comment#}
                 {%endfor%}
                 <hr>
             {%endfor%}
         </ul>
     </body>
-</html>
+</html> 
