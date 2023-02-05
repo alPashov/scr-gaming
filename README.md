@@ -8,5 +8,5 @@
     <li>pandas</li>
 </ul>
 <hr>
-<p>За скрепъра отвори AllPagesScr.py</p>
+<p>За скрепъйра отвори AllPagesScr.py</p>
 <p>За Фласк стартирането на локално ниво отвори flaskStUp.py</p>
