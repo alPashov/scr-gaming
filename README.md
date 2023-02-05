@@ -6,11 +6,7 @@
     <li>Playwright</li>
     <li>csv</li>
     <li>pandas</li>
-<<<<<<< HEAD
-    <li>array</li>
 </ul>
-=======
-</ul>
+<hr>
 <p>За скрепъра отвори AllPagesScr.py</p>
 <p>За Фласк стартирането на локално ниво отвори flaskStUp.py</p>
->>>>>>> a0967f8 (*added instructions)
