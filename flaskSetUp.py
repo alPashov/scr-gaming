@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def gaming():
-    return render_template('gaming.html', links = links)
+    return render_template('index.html', links = links)
 
 if __name__ == "__main__":
     webbrowser.open_new_tab("localhost:5050")

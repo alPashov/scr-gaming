@@ -1,0 +1,182 @@
+<html lang="eu">
+    <head>
+        <title>LapInf</title>
+        <link rel="stylesheet" type="text/css" href="{{css}}">
+        <style>
+            body
+{
+  background-color:#ffffff;
+  font-family: 'Oswald', sans-serif;
+}
+
+#order
+{
+  color:#58ACFA;
+  font-size:15px;
+  padding:50px 5px;
+  background-color:white;
+  
+  border-radius:150px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#58ACFA;
+  
+  position:relative;
+  
+  top:20px;
+  left:50vw;
+  
+  margin-left:-70px;
+  
+  display:inline-block;
+  -webkit-transform:rotate3d(0,0,1,30deg);
+  transform:rotate3d(0,0,1,30deg);
+  
+}
+
+/* MENU */
+
+.menu
+{
+  position:fixed;
+  left:0px;
+  top:-50px;
+  
+  width:100vw;
+  padding:20px;
+  text-align:center;
+  
+  background-color:rgba(0,0,0,0.9);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.6);
+  
+  font-size:20px;
+  color:black;
+
+  float:inherit;
+  
+  /* transition */
+  
+  transition:top 1s;
+  -webkit-transition:top 1s;
+  
+}
+
+.menu:hover
+{
+  top:0px;  
+}
+
+
+/* SPAN OF SPAN */
+
+.menu span
+{
+  margin:20px;  
+}
+
+.menu span a:hover
+{
+  color:rgba(255,255,255,0.5);  
+}
+
+
+
+/* Body and Title*/
+
+a
+{
+  text-decoration:none;
+  color:black;
+}
+
+h1 {
+    text-align: center;
+    display: block;
+}
+/* from gaming.html */
+body {
+    margin: 10%, auto;
+    padding: 5% auto;
+}
+ul {
+    width: 30%;
+    display: block;
+    float: inline-start;
+}
+img {
+    width: 45%;
+    text-align: center;
+    float: unset;
+}
+hr {
+    text-align: center;
+    width: 100%;
+}
+.box {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    line-height: 20px;
+    position: relative;
+    z-index: auto;
+}
+.menuA {
+    color: whitesmoke;
+    text-decoration: whitesmoke;
+}
+        </style>    
+    </head>
+    <body>
+        <link rel="stylesheet" href="syle.css">
+
+<!-- MENU -->
+
+
+
+        <div class="menu">
+            <span><a href="#" class="menuA">Home</a></span>
+            <span><a href="#" class="menuA">Gaming Laptops</a></span>
+            <span><a href="#" class="menuA">Everyday/Home Laptops</a></span>   
+            <span><a href="#" class="menuA">Office Laptops</a></span>   
+        </div>
+        {%for i  in range(0, 3)%}
+            <br>
+        {%endfor%}
+        <h1>Welcome to LapInf</h1>
+        {%for i  in range(0, 3)%}
+            <br>
+        {%endfor%}
+        <h2>Gaming List</h2>
+        <ul>
+            {%for l in links[0]%}
+                    <div class="box">
+                        <img src="{{l[3]}}">
+                        <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
+                        <ol><h3>    {{l[1]}}</h3></ol>
+                        <hr>
+                    </div>
+            {%endfor%}
+        </ul>
+        <h2>Everyday/Home List</h2>
+        <ul>
+            {%for l in links[1]%}
+            <div class="box">
+                <img src="{{l[3]}}">
+                <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
+                <ol><h3>    {{l[1]}}</h3></ol>
+                <hr>
+            </div>
+            {%endfor%}
+        </ul>
+        <h2>Office List</h2>
+        <ul>
+            {%for l in links[2]%}
+            <div class="box">
+                <img src="{{l[3]}}">
+                <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
+                <ol><h3>    {{l[1]}}</h3></ol>
+                <hr>
+            </div>
+            {%endfor%}
+    </body>
+</html>
