@@ -1,120 +1,89 @@
-body
-{
-  background-color:#ffffff;
-  font-family: 'Oswald', sans-serif;
-}
-
-#order
-{
-  color:#58ACFA;
-  font-size:15px;
-  padding:50px 5px;
-  background-color:white;
-  
-  border-radius:150px;
-  border-style:solid;
-  border-width:1px;
-  border-color:#58ACFA;
-  
-  position:relative;
-  
-  top:20px;
-  left:50vw;
-  
-  margin-left:-70px;
-  
-  display:inline-block;
-  -webkit-transform:rotate3d(0,0,1,30deg);
-  transform:rotate3d(0,0,1,30deg);
-  
-}
-
-/* MENU */
-
-.menu
-{
-  position:sticky;
-  top:-50px;
-  
-  width:100vw;
-  padding:20px;
-  text-align:center;
-  
-  background-color:rgba(0,0,0,0.9);
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.6);
-  
-  font-size:20px;
-  color:black;
-  
-  float: inherit;
-
-  /* transition */
-  
-  transition:top 1s;
-  -webkit-transition:top 1s;
-  
-}
-
-.menu:hover
-{
-  top:0px;  
-}
-
-
-/* SPAN OF SPAN */
-
-.menu span
-{
-  margin:20px;  
-}
-
-.menu span a:hover
-{
-  color:rgba(255,255,255,0.5);  
-}
-
-
-
-/* Body and Title*/
-
-a
-{
-  text-decoration:none;
-  color:black;
-}
-
-h1 {
-    text-align: center;
-    display: block;
-}
-/* from gaming.html */
 body {
-    margin: auto;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100px 30px auto 30px;
+    grid-template-areas: "header header"
+                         "menu menu"
+                         "sidebar content"
+                         "footer footer";
+    margin: 2rem;
+    font-family: 'Oswald', sans-serif;
+  }
+  h1, a, aside {
+    margin: 1.5rem;
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: black;
+  }
+  header {
+    grid-area: header;
+    background-color: grey;
+    vertical-align: center;
+  }
+  nav {
+    grid-area: menu;
+    background-color: silver;
+    text-align: right;
+    
+  }
+  aside {
+    grid-area: sidebar;
+    background-color: cyan;
+  }
+  article {
+    grid-area: content;
+    background-color: white;
+  }
+  footer {
+    grid-area: footer;
+    background-color: lightblue;
+    text-align: center;
+  }
+  @media screen and (max-width: 680px) {
+    body {
+       grid-template-rows: 100px 30px auto auto 30px;
+       grid-template-columns: 100%;
+       grid-template-areas: "header"
+                            "menu"
+                            "content"
+                            "sidebar"
+                            "footer";
+    }
+  }
+  
+  .menu
+  {
+    position:sticky;
+    top:-50px;
+    
+    /* width:100vw; */
+    padding:20px;
+    text-align:center;
+    
+    background-color:rgba(0,0,0,0.9);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.6);
+    
+    font-size:20px;
+    color:black;
+    
+    float: inherit;
+  
+    /* transition */
+    
+    transition:top 1s;
+    -webkit-transition:top 1s;
+    
+  }
+
+  .box {
+    max-width: 350px;
     padding: auto;
-}
-ul {
-    width: 30%;
-    display: block;
-    float: inline-start;
-}
-img {
-    width: 45%;
-    text-align: center;
-    float: unset;
-}
-hr {
-    text-align: center;
-    width: 100%;
-}
-.box {
-    box-sizing: border-box;
-    display: block;
-    float: none;
-    line-height: 20px;
-    position: relative;
-    z-index: auto;
-}
-.menuA {
-    color: whitesmoke;
-    text-decoration: whitesmoke;
-}
+    margin: auto;
+  }
+
+  img, li {
+    max-width: 250px;
+  }

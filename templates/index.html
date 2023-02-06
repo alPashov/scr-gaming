@@ -1,54 +1,62 @@
-<html lang="eu">
-    <head>
-        <title>LapInf</title>
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">  
-    </head>
-    <body>
-        <link rel="stylesheet" href="syle.css">
+<!DOCTYPE html>
+<html lang="bg-BG">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <title>LapInf</title>
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+</head>
+<body>
+   <article>
+      <!-- <h2>Gaming List</h2>
+      <ul>
+          {%for l in links[0]%}
+                  <img src="{{l[3]}}">
+                  <div><li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li></div>
+                  <ol><h3>    {{l[1]}}</h3></ol>
+                  <hr>
+          {%endfor%}
+      </ul>
+      <h2>Everyday/Home List</h2>
+      <ul>
+          {%for l in links[1]%}
+                  <li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li>
+                  <img src="{{l[3]}}">
+                  <ol><h3>    {{l[1]}}</h3></ol>
+                  <hr>
+          {%endfor%}
+      </ul>
+      <h2>Office List</h2>
+      <ul>
+          {%for l in links[2]%}
+                  <li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li>
+                  <img src="{{l[3]}}">
+                  <ol><h3>    {{l[1]}}</h3></ol>
+                  <hr>
+          {%endfor%}
+      </ul> -->
 
-<!-- MENU -->
-
-
-
-        
-        {%for i  in range(0, 3)%}
-            <br>
-        {%endfor%}
-        <h1>Welcome to LapInf</h1>
-        {%for i  in range(0, 3)%}
-            <br>
-        {%endfor%}
-        <h2>Gaming List</h2>
-        <ul>
-            {%for l in links[0]%}
-                    <div class="box">
-                        <img src="{{l[3]}}">
-                        <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
-                        <ol><h3>    {{l[1]}}</h3></ol>
-                        <hr>
-                    </div>
+      <ul>
+         {%for l in links%}
+            {%for c in l%}
+                  <div class="box">
+                     <li><a href="{{c[2]}}">{{c[0]}}</a></li>
+                  <img src="{{c[3]}}">
+                  <ol><h3>{{c[1]}}</h3></ol>
+                  </div>
             {%endfor%}
-        </ul>
-        <h2>Everyday/Home List</h2>
-        <ul>
-            {%for l in links[1]%}
-            <div class="box">
-                <img src="{{l[3]}}">
-                <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
-                <ol><h3>    {{l[1]}}</h3></ol>
-                <hr>
-            </div>
-            {%endfor%}
-        </ul>
-        <h2>Office List</h2>
-        <ul>
-            {%for l in links[2]%}
-            <div class="box">
-                <img src="{{l[3]}}">
-                <li><a href="{{l[2]}}" target="_blank">{{l[0]}}></a></li>
-                <ol><h3>    {{l[1]}}</h3></ol>
-                <hr>
-            </div>
-            {%endfor%}
-    </body>
+            <hr>
+         {%endfor%}
+      </ul>
+   </article>
+   <header><h1>WapInf</h1></header>
+   <nav>
+      <div class="menu">
+         <span><a href="#" class="menuA">Home</a></span>
+         <span><a href="#" class="menuA">Gaming Laptops</a></span>
+         <span><a href="#" class="menuA">Everyday/Home Laptops</a></span>   
+         <span><a href="#" class="menuA">Office Laptops</a></span>   
+      </div>
+   </nav>
+   <footer>Footer</footer>
+</body>
 </html>
