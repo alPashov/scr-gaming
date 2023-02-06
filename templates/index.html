@@ -1,7 +1,6 @@
 <html lang="eu">
     <head>
         <title>LapInf</title>
-        <link rel="stylesheet" type="text/css" href="{{css}}">
         <style>
             body
 {
@@ -38,8 +37,7 @@
 
 .menu
 {
-  position:fixed;
-  left:0px;
+  position:sticky;
   top:-50px;
   
   width:100vw;
@@ -51,9 +49,9 @@
   
   font-size:20px;
   color:black;
-
-  float:inherit;
   
+  float: inherit;
+
   /* transition */
   
   transition:top 1s;
@@ -95,8 +93,8 @@ h1 {
 }
 /* from gaming.html */
 body {
-    margin: 10%, auto;
-    padding: 5% auto;
+    margin: auto;
+    padding: auto;
 }
 ul {
     width: 30%;
@@ -133,12 +131,7 @@ hr {
 
 
 
-        <div class="menu">
-            <span><a href="#" class="menuA">Home</a></span>
-            <span><a href="#" class="menuA">Gaming Laptops</a></span>
-            <span><a href="#" class="menuA">Everyday/Home Laptops</a></span>   
-            <span><a href="#" class="menuA">Office Laptops</a></span>   
-        </div>
+        
         {%for i  in range(0, 3)%}
             <br>
         {%endfor%}
