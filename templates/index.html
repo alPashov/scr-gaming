@@ -7,7 +7,7 @@
 </head>
 <body>
    <article>
-      <!-- <h2>Gaming List</h2>
+      <h2>Gaming List</h2>
       <ul>
           {%for l in links[0]%}
                   <img src="{{l[3]}}">
@@ -19,10 +19,12 @@
       <h2>Everyday/Home List</h2>
       <ul>
           {%for l in links[1]%}
-                  <li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li>
-                  <img src="{{l[3]}}">
-                  <ol><h3>    {{l[1]}}</h3></ol>
+                  <div id="testDiv">
+                     <li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li>
+                     <img src="{{l[3]}}">
+                     <ol><h3>    {{l[1]}}</h3></ol>
                   <hr>
+                  </div>
           {%endfor%}
       </ul>
       <h2>Office List</h2>
@@ -33,9 +35,9 @@
                   <ol><h3>    {{l[1]}}</h3></ol>
                   <hr>
           {%endfor%}
-      </ul> -->
+      </ul>
 
-      <ul>
+      <!-- <ul>
          {%for l in links%}
             {%for c in l%}
                   <div class="box">                  
@@ -46,14 +48,18 @@
             {%endfor%}
             <hr>
          {%endfor%}
-      </ul>
+      </ul> -->
    </article>
-   <header><h1>WapInf</h1></header>
+   <header>
+      <br>
+      <br>
+      <h1>WapInf</h1>
+   </header>
    <nav>
       <div class="menu">
          <span><a href="#" class="menuA">Home</a></span>
          <span><a href="#" class="menuA">Gaming Laptops</a></span>
-         <span><a href="#" class="menuA">Everyday/Home Laptops</a></span>   
+         <span><a href="./testDiv" class="menuA">Everyday/Home Laptops</a></span>   
          <span><a href="#" class="menuA">Office Laptops</a></span>   
       </div>
    </nav>
