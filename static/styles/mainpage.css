@@ -109,7 +109,10 @@ body {
     box-shadow: 10px 5px 5px rgba(0,0,0,0.6);
     transition: box-shadow 0.4s ease-in-out;
   }
-
+  .box::after {
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.0);
+    transition: box-shadow 0.4s ease-in-out;
+  }
   img, li {
     max-width: 250px;
   }
