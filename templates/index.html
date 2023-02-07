@@ -6,7 +6,7 @@
    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
 </head>
 <body>
-   <article>
+   <!-- <article> -->
       <!-- <h2>Gaming List</h2>
       <ul>
           {%for l in links[0]%}
@@ -38,16 +38,16 @@
       <ul>
          {%for l in links%}
             {%for c in l%}
-                  <div class="box">
-                     <li><a href="{{c[2]}}">{{c[0]}}</a></li>
+                  <div class="box">                  
                   <img src="{{c[3]}}">
                   <ol><h3>{{c[1]}}</h3></ol>
+                  <li><a href="{{c[2]}}">{{c[0]}}</a></li>
                   </div>
             {%endfor%}
             <hr>
          {%endfor%}
       </ul>
-   </article>
+   <!-- </article> -->
    <header><h1>WapInf</h1></header>
    <nav>
       <div class="menu">

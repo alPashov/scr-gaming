@@ -5,13 +5,13 @@ body {
     grid-template-rows: 100px 30px auto 30px;
     grid-template-areas: "header header"
                          "menu menu"
-                         "sidebar content"
+                         /* "sidebar content" */
                          "footer footer";
-    margin: 2rem;
     font-family: 'Oswald', sans-serif;
+    word-wrap: break-word;
+    margin: 5%;
   }
   h1, a, aside {
-    margin: 1.5rem;
     text-align: center;
   }
   
@@ -41,22 +41,32 @@ body {
     grid-area: footer;
     background-color: lightblue;
     text-align: center;
+    border-radius: 25px;
   }
   @media screen and (max-width: 680px) {
     body {
-       grid-template-rows: 100px 30px auto auto 30px;
+       grid-template-rows: 600px 30px auto auto 30px;
        grid-template-columns: 100%;
        grid-template-areas: "header"
                             "menu"
                             "content"
-                            "sidebar"
+                            /* "sidebar" */
                             "footer";
+    }
+    .box {
+      width: 600px;
+      padding: auto;
+      margin: auto;
+    }
+  
+    img, li {
+      width: 360px;
     }
   }
   
   .menu
   {
-    position:sticky;
+    position: sticky;
     top:-50px;
     
     /* width:100vw; */
@@ -65,25 +75,45 @@ body {
     
     background-color:rgba(0,0,0,0.9);
     box-shadow: 0px 2px 5px rgba(0,0,0,0.6);
+    border-radius: 0px 0px 30px 30px;
+
     
     font-size:20px;
-    color:black;
-    
+    color:white;
     float: inherit;
-  
     /* transition */
     
     transition:top 1s;
     -webkit-transition:top 1s;
-    
+  
   }
 
+  .menu:hover {
+    top: 0;
+  }  
+
   .box {
-    max-width: 350px;
+    max-width: fit-content;
     padding: auto;
     margin: auto;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: block;
+    float: none;
+    line-height: auto;
+    position: relative;
+    border: 3px dashed blue;
+  }
+
+  .box:hover {
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.6);
+    transition: box-shadow 0.4s ease-in-out;
   }
 
   img, li {
     max-width: 250px;
+  }
+
+  img {
+    border-radius: 25px;
   }
