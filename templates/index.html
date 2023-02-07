@@ -7,33 +7,34 @@
 </head>
 <body>
    <article>
-      <h2>Gaming List</h2>
+      <h2 id="gamingListSel">Gaming List</h2>
       <ul>
           {%for l in links[0]%}
-                  <img src="{{l[3]}}">
-                  <div><li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li></div>
-                  <ol><h3>    {{l[1]}}</h3></ol>
-                  <hr>
+          <div class="box">                  
+            <img src="{{l[3]}}">
+            <li><a href="{{l[2]}}" class="names">{{l[0]}}</a></li>
+            <ol><h3>{{l[1]}}</h3></ol>
+         </div>
           {%endfor%}
       </ul>
-      <h2>Everyday/Home List</h2>
+      <h2 id="homeListSel">Everyday/Home List</h2>
       <ul>
           {%for l in links[1]%}
-                  <div id="testDiv">
-                     <li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li>
-                     <img src="{{l[3]}}">
-                     <ol><h3>    {{l[1]}}</h3></ol>
-                  <hr>
-                  </div>
+          <div class="box">                  
+            <img src="{{l[3]}}">
+            <li><a href="{{l[2]}}" class="names">{{l[0]}}</a></li>
+            <ol><h3>{{l[1]}}</h3></ol>
+         </div>
           {%endfor%}
       </ul>
-      <h2>Office List</h2>
+      <h2 id="officeListSel">Office List</h2>
       <ul>
           {%for l in links[2]%}
-                  <li><a href="{{l[2]}}" target="_blank">{{l[0]}}</a></li>
-                  <img src="{{l[3]}}">
-                  <ol><h3>    {{l[1]}}</h3></ol>
-                  <hr>
+          <div class="box">                  
+            <img src="{{l[3]}}">
+            <li><a href="{{l[2]}}" class="names">{{l[0]}}</a></li>
+            <ol><h3>{{l[1]}}</h3></ol>
+         </div>
           {%endfor%}
       </ul>
 
@@ -53,14 +54,14 @@
    <header>
       <br>
       <br>
-      <h1>WapInf</h1>
+      <h1 id="homeSel">WapInf</h1>
    </header>
    <nav>
       <div class="menu">
-         <span><a href="#" class="menuA">Home</a></span>
-         <span><a href="#" class="menuA">Gaming Laptops</a></span>
-         <span><a href="./testDiv" class="menuA">Everyday/Home Laptops</a></span>   
-         <span><a href="#" class="menuA">Office Laptops</a></span>   
+         <span><a href="#homeSel" class="menuA">Home</a></span>
+         <span><a href="#gamingListSel" class="menuA">Gaming Laptops</a></span>
+         <span><a href="#homeListSel" class="menuA">Everyday/Home Laptops</a></span>   
+         <span><a href="#officeListSel" class="menuA">Office Laptops</a></span>   
       </div>
    </nav>
 </body>
