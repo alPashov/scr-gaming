@@ -12,8 +12,11 @@
           {%for l in links[0]%}
           <div class="box">                  
             <img src="{{l[3]}}">
-            <li><a href="{{l[2]}}" class="names">{{l[0]}}</a></li>
-            <ol><h3>{{l[1]}}</h3></ol>
+            <li><a href="{{l[2]}}" class="names" target="_blank">{{l[0]}}</a></li>
+            <ol><p>{{l[1]}}</p></ol>
+            {% if l%}
+            <ol><div class="avaibility"><p>В наличност</p></div></ol>
+            {%endif%}
          </div>
           {%endfor%}
       </ul>
@@ -22,8 +25,11 @@
           {%for l in links[1]%}
           <div class="box">                  
             <img src="{{l[3]}}">
-            <li><a href="{{l[2]}}" class="names">{{l[0]}}</a></li>
-            <ol><h3>{{l[1]}}</h3></ol>
+            <li><a href="{{l[2]}}" class="names" target="_blank">{{l[0]}}</a></li>
+            <ol><p>{{l[1]}}</p></ol>
+            {% if l%}
+            <ol><div class="avaibility"><p>В наличност</p></div></ol>
+            {%endif%}
          </div>
           {%endfor%}
       </ul>
@@ -32,8 +38,11 @@
           {%for l in links[2]%}
           <div class="box">                  
             <img src="{{l[3]}}">
-            <li><a href="{{l[2]}}" class="names">{{l[0]}}</a></li>
-            <ol><h3>{{l[1]}}</h3></ol>
+            <li><a href="{{l[2]}}" class="names" target="_blank">{{l[0]}}</a></li>
+            <ol><p>{{l[1]}}</p></ol>
+            {% if l%}
+            <ol><div class="avaibility"><p>В наличност</p></div></ol>
+            {%endif%}
          </div>
           {%endfor%}
       </ul>
@@ -52,9 +61,9 @@
       </ul> -->
    </article>
    <header>
+      <br id="homeSel">
       <br>
-      <br>
-      <h1 id="homeSel">LapInf</h1>
+      <h1>LapInf</h1>
    </header>
    <nav>
       <div class="menu">
