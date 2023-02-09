@@ -14,8 +14,10 @@
             <img src="{{l[3]}}">
             <li><a href="{{l[2]}}" class="names" target="_blank">{{l[0]}}</a></li>
             <ol><p>{{l[1]}}</p></ol>
-            {% if l[4]%}
-            <ol><div class="avaibility"><p>Не е наличен</p></div></ol>
+            {% if l[4] or l[5]%}
+            <ol><div class="no_avaibility"><p>Не е в наличност</p></div></ol>
+            {%else%}
+            <ol><div class="avaibility"><p>В наличност</p></div></ol>
             {%endif%}
          </div>
           {%endfor%}
@@ -27,7 +29,9 @@
             <img src="{{l[3]}}">
             <li><a href="{{l[2]}}" class="names" target="_blank">{{l[0]}}</a></li>
             <ol><p>{{l[1]}}</p></ol>
-            {% if l[4]%}
+            {% if l[4] or l[5]%}
+            <ol><div class="no_avaibility"><p>Не е в наличност</p></div></ol>
+            {%else%}
             <ol><div class="avaibility"><p>В наличност</p></div></ol>
             {%endif%}
          </div>
@@ -40,7 +44,9 @@
             <img src="{{l[3]}}">
             <li><a href="{{l[2]}}" class="names" target="_blank">{{l[0]}}</a></li>
             <ol><p>{{l[1]}}</p></ol>
-            {% if l[4]%}
+            {% if l[4] or l[5]%}
+            <ol><div class="no_avaibility"><p>Не е в наличност</p></div></ol>
+            {%else%}
             <ol><div class="avaibility"><p>В наличност</p></div></ol>
             {%endif%}
          </div>

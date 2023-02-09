@@ -142,6 +142,15 @@ body {
   }
 
   .avaibility {
+    border: 5px solid #AAFF00;
+    border-radius: 15px;
+    background-color: #AAFF00;
+    width: max-content;
+    float: right;
+    margin: 1rem;
+  }
+
+  .no_avaibility {
     border: 5px solid red;
     border-radius: 15px;
     background-color: red;
