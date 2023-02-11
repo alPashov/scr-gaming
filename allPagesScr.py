@@ -35,10 +35,10 @@ def html_parsers(htmls):
             href = i.select_one("div.card-v2-info a").attrs["href"]
             heading2 = i.select_one("div.pad-hrz-xs h2.card-v2-title-wrapper a").text.strip()
             price = i.select_one("div.card-v2-content div.card-v2-pricing p.product-new-price").text.strip()
-            # img_src = i.select_one("div.card-v2-info div.card-v2-thumb-inner img.w-100").attrs['src']
+            img_src = i.select_one("div.card-v2-info div.card-v2-thumb-inner img.w-100").attrs['src']
             avaibility = i.select_one("div.card-v2-wrapper div.card-v2-info div.pad-hrz-xs div.card-estimate-placeholder div.text-availability-out_of_stock")
             oos = i.select_one("div.card-v2-wrapper div.card-v2-info div.pad-hrz-xs div.card-estimate-placeholder div.text-availability-unavailable")
-            product = (heading2, price, href, avaibility, oos)
+            product = (heading2, price, href, img_src, avaibility, oos)
             items_page.append(product)
         links.append(items_page)
         # links.append(href)
